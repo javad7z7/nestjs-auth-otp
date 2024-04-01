@@ -10,5 +10,6 @@ import { OTPEntity } from "../user/entities/otp.entity";
   imports: [TypeOrmModule.forFeature([UserEntity, OTPEntity])],
   controllers: [AuthController],
   providers: [AuthService, JwtService],
+  exports: [AuthService, JwtService, TypeOrmModule],
 })
 export class AuthModule {}
